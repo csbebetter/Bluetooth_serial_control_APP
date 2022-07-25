@@ -14,12 +14,10 @@ import androidx.lifecycle.ViewModelProviders;
 
 public class CommunicateActivity extends AppCompatActivity {
 
-    private TextView connectionText, messagesView;
+    private TextView connectionText, messagesView, Text_Device;
     private EditText messageBox;
     private Button sendButton, connectButton, Button_f, Button_b, Button_l, Button_r, Button_s;
     private ImageView return_Image;
-
-
     private CommunicateViewModel viewModel;
 
     @Override
@@ -53,6 +51,7 @@ public class CommunicateActivity extends AppCompatActivity {
         Button_l = findViewById(R.id.button_l);
         Button_r = findViewById(R.id.button_r);
         Button_s = findViewById(R.id.button_s);
+        Text_Device = findViewById(R.id.communicate_toolbar_title);
 
         return_Image.setOnClickListener(new View.OnClickListener()
         {@Override
@@ -64,7 +63,11 @@ public class CommunicateActivity extends AppCompatActivity {
 
         // Start observing the data sent to us by the ViewModel
         viewModel.getConnectionStatus().observe(this, this::onConnectionStatus);
-        viewModel.getDeviceName().observe(this, name -> setTitle(getString(R.string.device_name_format, name)));
+        viewModel.getDeviceName().observe(this, name -> {
+            if (!TextUtils.isEmpty(name)) {
+                Text_Device.setText(name);
+            }
+        });
         viewModel.getMessages().observe(this, message -> {
             if (TextUtils.isEmpty(message)) {
                 message = getString(R.string.no_messages);
@@ -78,6 +81,8 @@ public class CommunicateActivity extends AppCompatActivity {
             }
         });
 
+        //setup the FrameLayout title
+        Text_Device.setText(viewModel.getDeviceName().getValue());
         // Setup the send button click action
         sendButton.setOnClickListener(v -> viewModel.sendMessage(messageBox.getText().toString()));
         Button_f.setOnClickListener(v -> viewModel.sendMessage("F"));
