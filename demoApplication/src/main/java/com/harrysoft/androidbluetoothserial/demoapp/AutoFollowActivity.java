@@ -33,18 +33,18 @@ public class AutoFollowActivity extends AppCompatActivity {
         // Setup our ViewModel
         viewModel = ViewModelProviders.of(this).get(CommunicateViewModel.class);
 
-        // This method return false if there is an error, so if it does, we should close.
-        if (!viewModel.setupViewModel(getIntent().getStringExtra("device_name"), getIntent().getStringExtra("device_mac"))) {
-            finish();
-            return;
-        }
+//        // This method return false if there is an error, so if it does, we should close.
+//        if (!viewModel.setupViewModel(getIntent().getStringExtra("device_name"), getIntent().getStringExtra("device_mac"))) {
+//            finish();
+//            return;
+//        }
 
         // Setup our Views
-        connectionText = findViewById(R.id.communicate_connection_text);
+        //connectionText = findViewById(R.id.communicate_connection_text);
         messagesView = findViewById(R.id.communicate_messages);
         messageBox = findViewById(R.id.communicate_message);
         sendButton = findViewById(R.id.communicate_send);
-        connectButton = findViewById(R.id.communicate_connect);
+        //connectButton = findViewById(R.id.communicate_connect);
         return_Image = findViewById(R.id.communicate_toolbar_return);
         Button_f = findViewById(R.id.button_f);
         Button_b = findViewById(R.id.button_b);

@@ -23,8 +23,6 @@ public class AboutActivity extends AppCompatActivity {
 
     private RelativeLayout relativeLayout;
 
-    private Toolbar toolbar;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +56,7 @@ public class AboutActivity extends AppCompatActivity {
 
     private void initViews(){
         relativeLayout= (RelativeLayout) findViewById(R.id.about_activity_relativeLayout);
-        toolbar= (Toolbar) findViewById(R.id.about_activity_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.about_activity_toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar=getSupportActionBar();
         if(actionBar!=null){

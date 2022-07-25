@@ -27,6 +27,8 @@ int anim design_bottom_sheet_slide_out 0x7f010019
 int anim design_snackbar_in 0x7f01001a
 int anim design_snackbar_out 0x7f01001b
 int anim fragment_fast_out_extra_slow_in 0x7f01001c
+int anim left_in 0x7f010020
+int anim left_out 0x7f010021
 int anim mtrl_bottom_sheet_slide_in 0x7f01001d
 int anim mtrl_bottom_sheet_slide_out 0x7f01001e
 int anim mtrl_card_lowers_interpolator 0x7f01001f
@@ -1903,8 +1905,6 @@ int id clip_horizontal 0x7f080071
 int id clip_vertical 0x7f080072
 int id clockwise 0x7f080073
 int id collapseActionView 0x7f080074
-int id communicate_connect 0x7f080075
-int id communicate_connection_text 0x7f080076
 int id communicate_message 0x7f080077
 int id communicate_messages 0x7f080078
 int id communicate_send 0x7f080079
@@ -2008,7 +2008,6 @@ int id line1 0x7f0800da
 int id line3 0x7f0800db
 int id linear 0x7f0800dc
 int id linearLayout 0x7f0800dd
-int id linearLayout2 0x7f0800de
 int id linearLayout3 0x7f0800df
 int id linearLayout4 0x7f0800e0
 int id linearLayout5 0x7f0800e1

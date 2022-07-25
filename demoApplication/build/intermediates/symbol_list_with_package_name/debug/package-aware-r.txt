@@ -28,6 +28,8 @@ anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
 anim fragment_fast_out_extra_slow_in
+anim left_in
+anim left_out
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
@@ -1904,8 +1906,6 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id collapseActionView
-id communicate_connect
-id communicate_connection_text
 id communicate_message
 id communicate_messages
 id communicate_send
@@ -2009,7 +2009,6 @@ id line1
 id line3
 id linear
 id linearLayout
-id linearLayout2
 id linearLayout3
 id linearLayout4
 id linearLayout5

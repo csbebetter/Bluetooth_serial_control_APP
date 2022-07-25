@@ -44,13 +44,10 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        toolbar_about = (ImageView) findViewById(R.id.toolbar_about);
-        toolbar_about.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, AboutActivity.class);
-                startActivity(i);
-            }
+        toolbar_about = findViewById(R.id.toolbar_about);
+        toolbar_about.setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this, AboutActivity.class);
+            startActivity(i);
         });
 
         // Setup our Views
