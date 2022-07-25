@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">洋田婴儿车控制器</string>
+    <string name="messages">信息：</string>
+    <string name="message">信息：</string>
+    <string name="send">发送</string>
+    <string name="paired_devices">请选择已配对的婴儿车设备:</string>
+    <string name="no_messages">暂无信息发送与接收!</string>
+    <string name="no_bluetooth">蓝牙不可用</string>
+    <string name="device_name_format">Device: %1$s</string>
+    <string name="status_connecting">设备正在连接中</string>
+    <string name="status_connected">设备连接成功</string>
+    <string name="status_disconnected">设备未连接</string>
+    <string name="connect">连接设备</string>
+    <string name="connected">已连接</string>
+    <string name="disconnect">断开连接</string>
+    <string name="connection_failed">连接失败</string>
+    <string name="bluetooth_unavailable">连接失败</string>
+    <string name="message_send_error">信息发送失败</string>
+    <string name="you_sent">You</string>
+    <string name="f">前进</string>
+    <string name="b">后退</string>
+    <string name="s">停止</string>
+    <string name="l">左转</string>
+    <string name="r">右转</string>
+    <string name="baby_car_Name">婴儿车型号：</string>
+    <string name="baby_car_MAC">婴儿车蓝牙MAc：</string>
+    <string name="return_button">返回</string>
+</resources>

@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\drawable_button_selector.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\drawable\\button_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\drawable_return_fh.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\drawable\\return_fh.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\drawable_button_pressed.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\drawable\\button_pressed.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\drawable_button_drawable.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\drawable\\button_drawable.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\drawable_pic3_about.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\drawable\\pic3_about.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\drawable_pic1_ytbabycar.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\drawable\\pic1_ytbabycar.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\drawable_about.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\drawable\\about.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\drawable_pic2_ytbabycar_list.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\drawable\\pic2_ytbabycar_list.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\mipmap_bluetooth_logo.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\mipmap\\bluetooth_logo.png"
+    },
+    {
+        "merged": "com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:/layout_activity_communicate.xml.flat",
+        "source": "com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:/layout/activity_communicate.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\drawable_add.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\drawable\\add.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\layout_list_item.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\layout\\list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\layout_activity_communicate.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\layout\\activity_communicate.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\layout_about_layout.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\layout\\about_layout.xml"
+    }
+]
