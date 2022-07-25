@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-29:12
 MERGED from [:androidBluetoothSerial] D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\csbeb\.gradle\caches\transforms-3\c088e681ad6c530c297c7a55872275c8\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [io.github.medyo:android-about-page:2.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\d1cba7319b87eeebb39966b253b2a809\transformed\android-about-page-2.0.0\AndroidManifest.xml:2:1-11:12
@@ -46,20 +46,20 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\3d3133f584a4d3b457e9e800503691a7\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\f0e0f62f3be0ec9bb2834fe61dbd8342\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\fb95b4ed45a1c3f0f159b3f31b759eb7\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:3:5-59
 		INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml
 		INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml
-		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-29:12
 		INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml
-		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:1-29:12
 		INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:2:11-69
@@ -80,7 +80,7 @@ ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\m
 	android:name
 		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:7:22-73
 application
-ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:9:5-26:19
+ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:9:5-27:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\csbeb\.gradle\caches\transforms-3\c088e681ad6c530c297c7a55872275c8\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\csbeb\.gradle\caches\transforms-3\c088e681ad6c530c297c7a55872275c8\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\csbeb\.gradle\caches\transforms-3\2013c74204f73afc47395114645d0db2\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -125,14 +125,18 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:21:17-77
 	android:name
 		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:21:27-74
-activity#com.harrysoft.androidbluetoothserial.demoapp.CommunicateActivity
-ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:24:9-57
+activity#com.harrysoft.androidbluetoothserial.demoapp.AutoFollowActivity
+ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:24:9-56
 	android:name
-		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:24:19-54
+		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:24:19-53
+activity#com.harrysoft.androidbluetoothserial.demoapp.ModeSelectionActivity
+ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:25:9-59
+	android:name
+		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:25:19-56
 activity#com.harrysoft.androidbluetoothserial.demoapp.AboutActivity
-ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:25:9-51
+ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:26:9-51
 	android:name
-		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:25:19-48
+		ADDED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:26:19-48
 uses-sdk
 INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml

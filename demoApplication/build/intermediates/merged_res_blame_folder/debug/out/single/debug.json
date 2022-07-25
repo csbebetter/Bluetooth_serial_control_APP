@@ -12,6 +12,10 @@
         "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\layout\\activity_about.xml"
     },
     {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\layout_activity_auto_follow.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\layout\\activity_auto_follow.xml"
+    },
+    {
         "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-21:\\drawable_return_fh.png.flat",
         "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-23:\\drawable\\return_fh.png"
     },

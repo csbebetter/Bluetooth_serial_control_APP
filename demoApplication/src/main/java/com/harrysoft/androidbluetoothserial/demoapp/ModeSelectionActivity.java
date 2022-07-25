@@ -1,5 +1,6 @@
 package com.harrysoft.androidbluetoothserial.demoapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MenuItem;
@@ -72,9 +73,31 @@ public class ModeSelectionActivity extends AppCompatActivity {
         //setup the FrameLayout title
         Text_Device.setText(viewModel.getDeviceName().getValue());
         // Setup the send button click action
-        mode1_auto_follow.setOnClickListener(v -> viewModel.sendMessage("1"));
-        mode2_remote_control.setOnClickListener(v -> viewModel.sendMessage("2"));
-        mode3_recall.setOnClickListener(v -> viewModel.sendMessage("3"));
+        mode1_auto_follow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewModel.sendMessage("1");
+                Intent i = new Intent(ModeSelectionActivity.this, AutoFollowActivity.class);
+                startActivity(i);
+            }
+        });
+        mode2_remote_control.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewModel.sendMessage("2");
+                Intent i = new Intent(ModeSelectionActivity.this, AutoFollowActivity.class);
+                startActivity(i);
+            }
+        });
+        mode3_recall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewModel.sendMessage("3");
+                Intent i = new Intent(ModeSelectionActivity.this, AutoFollowActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 
     // Called when the ViewModel updates us of our connectivity status

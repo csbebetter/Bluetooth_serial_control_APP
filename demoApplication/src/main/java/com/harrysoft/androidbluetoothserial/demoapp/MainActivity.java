@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -79,10 +78,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // Called when clicking on a device entry to start the CommunicateActivity
-    public void openCommunicationsActivity(String deviceName, String macAddress) {
+    // Called when clicking on a device entry to start the AutoFollowActivity
+    public void openModeSelectionActivity(String deviceName, String macAddress) {
         //显示Intent就是直接以“类名称”来指定要启动哪一个Activity;
-        Intent intent = new Intent(this, CommunicateActivity.class);
+        Intent intent = new Intent(this, ModeSelectionActivity.class);
         intent.putExtra("device_name", deviceName);
         intent.putExtra("device_mac", macAddress);
         startActivity(intent);
@@ -125,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         void setupView(BluetoothDevice device) {
                 text1.setText(device.getName());
                 text2.setText(device.getAddress());
-                layout.setOnClickListener(view -> openCommunicationsActivity(device.getName(), device.getAddress()));
+                layout.setOnClickListener(view -> openModeSelectionActivity(device.getName(), device.getAddress()));
         }
     }
 

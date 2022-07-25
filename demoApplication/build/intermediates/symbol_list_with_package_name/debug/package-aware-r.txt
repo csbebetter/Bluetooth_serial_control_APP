@@ -2135,6 +2135,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollView2
+id scrollView3
 id scrollable
 id search_badge
 id search_bar
@@ -2324,7 +2325,7 @@ layout abc_tooltip
 layout about_page
 layout about_page_separator
 layout activity_about
-layout activity_communicate
+layout activity_auto_follow
 layout activity_main
 layout activity_mode_selection
 layout custom_dialog
