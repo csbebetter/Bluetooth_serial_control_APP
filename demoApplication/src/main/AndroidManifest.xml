@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CommunicateActivity" />
+        <activity android:name=".ModeSelectionActivity" />
         <activity android:name=".AboutActivity" />
     </application>
 

@@ -28,7 +28,7 @@ public class AboutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.about_layout);
+        setContentView(R.layout.activity_about);
         initViews();
         View aboutPage = new AboutPage(this)
                 .isRTL(false)

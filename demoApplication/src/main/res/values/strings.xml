@@ -25,4 +25,5 @@
     <string name="baby_car_Name">婴儿车型号：</string>
     <string name="baby_car_MAC">婴儿车蓝牙MAc：</string>
     <string name="return_button">返回</string>
+    <string name="no_mode_select">你还没有选择相关模式！</string>
 </resources>

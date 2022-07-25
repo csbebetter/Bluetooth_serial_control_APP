@@ -1,3 +1,6 @@
 /.idea/
 /.gradle/
 /build/
+/demoApplication/build/generated/ap_generated_sources/debug/out/
+/demoApplication/build/generated/source/buildConfig/debug/
+

@@ -1910,6 +1910,7 @@ id communicate_message
 id communicate_messages
 id communicate_send
 id communicate_toolbar_return
+id communicate_toolbar_title
 id confirm_button
 id container
 id content
@@ -1972,6 +1973,7 @@ id floating
 id forever
 id fragment_container_view_tag
 id frameLayout
+id frameLayout2
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2009,6 +2011,8 @@ id linear
 id linearLayout
 id linearLayout2
 id linearLayout3
+id linearLayout4
+id linearLayout5
 id linearLayout_button
 id listMode
 id list_item
@@ -2040,6 +2044,14 @@ id material_value_index
 id message
 id middle
 id mini
+id mode_button1
+id mode_button2
+id mode_button3
+id mode_selection_connect
+id mode_selection_connection_text
+id mode_selection_messages
+id mode_selection_toolbar_return
+id mode_selection_toolbar_title
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -2197,6 +2209,7 @@ id textStart
 id textTop
 id textView
 id textView2
+id textView3
 id textView4
 id text_input_end_icon
 id text_input_error_icon
@@ -2308,11 +2321,12 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout about_layout
 layout about_page
 layout about_page_separator
+layout activity_about
 layout activity_communicate
 layout activity_main
+layout activity_mode_selection
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2523,6 +2537,7 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string no_bluetooth
 string no_messages
+string no_mode_select
 string paired_devices
 string password_toggle_content_description
 string path_password_eye
