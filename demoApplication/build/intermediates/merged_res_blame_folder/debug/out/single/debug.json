@@ -12,12 +12,12 @@
         "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:\\drawable\\return_fh.png"
     },
     {
-        "merged": "com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:/layout_activity_mode_selection.xml.flat",
-        "source": "com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:/layout/activity_mode_selection.xml"
-    },
-    {
         "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\layout_activity_mode_selection.xml.flat",
         "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:\\layout\\activity_mode_selection.xml"
+    },
+    {
+        "merged": "com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:/layout_list_item.xml.flat",
+        "source": "com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:/layout/list_item.xml"
     },
     {
         "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\drawable_add.png.flat",
@@ -66,6 +66,10 @@
     {
         "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\mipmap_bluetooth_logo.png.flat",
         "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:\\mipmap\\bluetooth_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\drawable_devies.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:\\drawable\\devies.png"
     },
     {
         "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\anim_left_out.xml.flat",

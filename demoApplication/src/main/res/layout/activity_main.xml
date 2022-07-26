@@ -11,15 +11,12 @@
             android:id="@+id/frameLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="337dp"
             android:background="?android:attr/colorPrimary"
             android:elevation="4dp"
-            app:layout_constraintBottom_toTopOf="@+id/main_swiperefresh"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:id="@+id/toolbar_about"
@@ -28,9 +25,11 @@
                     android:layout_gravity="start"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
+                    android:contentDescription="TODO"
                     android:focusable="true"
                     android:padding="13dp"
-                    android:src="@drawable/about" />
+                    android:src="@drawable/about"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
                     android:id="@+id/toolbar_title"
@@ -40,7 +39,7 @@
                     android:gravity="center"
                     android:maxEms="10"
                     android:text="@string/app_name"
-                    android:textColor="@color/white"
+                    android:textColor="#455A64"
                     android:textSize="17sp"
                     android:textStyle="bold" />
 
@@ -52,16 +51,19 @@
             android:layout_height="191dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
             android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/frameLayout">
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="151dp"
+                    android:layout_width="240dp"
+                    android:layout_height="180dp"
                     android:layout_gravity="center"
+                    android:contentDescription="TODO"
                     android:src="@drawable/pic1_ytbabycar"
                     tools:layout_editor_absoluteX="116dp"
                     tools:layout_editor_absoluteY="62dp" />
@@ -85,12 +87,14 @@
             android:id="@+id/main_swiperefresh"
             android:layout_width="384dp"
             android:layout_height="400dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginEnd="19dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/main_devices"

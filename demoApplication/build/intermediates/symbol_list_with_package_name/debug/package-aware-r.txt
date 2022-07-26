@@ -1804,6 +1804,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable devies
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_clock_black_24dp
@@ -2057,6 +2058,7 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView3
 id info
 id invisible
 id inward
