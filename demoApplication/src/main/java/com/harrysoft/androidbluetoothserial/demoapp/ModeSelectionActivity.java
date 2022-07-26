@@ -16,7 +16,7 @@ import androidx.lifecycle.ViewModelProviders;
 public class ModeSelectionActivity extends AppCompatActivity {
 
     private TextView connectionText, messagesView, Text_Device;
-    private Button connectButton, mode1_auto_follow, mode2_remote_control, mode3_recall;
+    private Button connectButton, mode1_auto_follow, mode2_remote_control, mode3_recall, Button_f, Button_b, Button_l, Button_r, Button_s;
     private CommunicateViewModel viewModel;
     private LinearLayout auto_follow_buttons, modes;
     @Override
@@ -48,6 +48,11 @@ public class ModeSelectionActivity extends AppCompatActivity {
         mode3_recall = findViewById(R.id.mode_button3);
         auto_follow_buttons = findViewById(R.id.linearLayout_button);
         modes = findViewById(R.id.linearLayout4);
+        Button_f = findViewById(R.id.button_f);
+        Button_b = findViewById(R.id.button_b);
+        Button_l = findViewById(R.id.button_l);
+        Button_r = findViewById(R.id.button_r);
+        Button_s = findViewById(R.id.button_s);
 
         ImageView return_Image = findViewById(R.id.mode_selection_toolbar_return);
 
@@ -99,6 +104,12 @@ public class ModeSelectionActivity extends AppCompatActivity {
 
             }
         });
+
+        Button_f.setOnClickListener(v -> viewModel.sendMessage("F"));
+        Button_b.setOnClickListener(v -> viewModel.sendMessage("X"));
+        Button_l.setOnClickListener(v -> viewModel.sendMessage("L"));
+        Button_r.setOnClickListener(v -> viewModel.sendMessage("R"));
+        Button_s.setOnClickListener(v -> viewModel.sendMessage("S"));
 
     }
 
