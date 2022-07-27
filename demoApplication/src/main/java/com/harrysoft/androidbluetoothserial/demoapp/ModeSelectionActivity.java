@@ -16,9 +16,9 @@ import androidx.lifecycle.ViewModelProviders;
 public class ModeSelectionActivity extends AppCompatActivity {
 
     private TextView connectionText, messagesView, Text_Device;
-    private Button connectButton, mode1_auto_follow, mode2_remote_control, mode3_recall, Button_f, Button_b, Button_l, Button_r, Button_s;
+    private Button connectButton, mode1_auto_follow, mode2_remote_control, mode3_recall;
     private CommunicateViewModel viewModel;
-    private LinearLayout auto_follow_buttons, modes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Setup our activity
@@ -46,13 +46,7 @@ public class ModeSelectionActivity extends AppCompatActivity {
         mode1_auto_follow = findViewById(R.id.mode_button1);
         mode2_remote_control = findViewById(R.id.mode_button2);
         mode3_recall = findViewById(R.id.mode_button3);
-        auto_follow_buttons = findViewById(R.id.linearLayout_button);
-        modes = findViewById(R.id.linearLayout4);
-        Button_f = findViewById(R.id.button_f);
-        Button_b = findViewById(R.id.button_b);
-        Button_l = findViewById(R.id.button_l);
-        Button_r = findViewById(R.id.button_r);
-        Button_s = findViewById(R.id.button_s);
+
 
         ImageView return_Image = findViewById(R.id.mode_selection_toolbar_return);
 
@@ -91,26 +85,15 @@ public class ModeSelectionActivity extends AppCompatActivity {
         mode2_remote_control.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                auto_follow_buttons.setVisibility(View.VISIBLE);
-                modes.setVisibility(View.GONE);
                 viewModel.sendMessage("2");
-
             }
         });
         mode3_recall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewModel.sendMessage("3");
-
             }
         });
-
-        Button_f.setOnClickListener(v -> viewModel.sendMessage("F"));
-        Button_b.setOnClickListener(v -> viewModel.sendMessage("X"));
-        Button_l.setOnClickListener(v -> viewModel.sendMessage("L"));
-        Button_r.setOnClickListener(v -> viewModel.sendMessage("R"));
-        Button_s.setOnClickListener(v -> viewModel.sendMessage("S"));
-
     }
 
     // Called when the ViewModel updates us of our connectivity status
@@ -166,13 +149,6 @@ public class ModeSelectionActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // Close the activity
-        if(auto_follow_buttons.getVisibility() == View.VISIBLE){
-            auto_follow_buttons.setVisibility(View.GONE);
-            modes.setVisibility(View.VISIBLE);
-
-        }
-        else {
-            finish();
-        }
+        finish();
     }
 }
