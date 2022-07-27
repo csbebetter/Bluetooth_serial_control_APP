@@ -4,7 +4,7 @@
     "type": "AAPT_FRIENDLY_MERGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.harrysoft.androidbluetoothserial",
+  "applicationId": "com.litecdows.androidbluetoothserial",
   "variantName": "debug",
   "elements": [
     {

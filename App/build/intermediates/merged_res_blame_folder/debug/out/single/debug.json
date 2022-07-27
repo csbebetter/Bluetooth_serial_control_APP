@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/layout_activity_main.xml.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_pic1_ytbabycar.png.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/pic1_ytbabycar.png"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_about.png.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/about.png"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_pic2_ytbabycar_list.png.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/pic2_ytbabycar_list.png"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_pic3_about.png.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/pic3_about.png"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_button_selector.xml.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/button_selector.xml"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/layout_activity_mode_selection.xml.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/layout/activity_mode_selection.xml"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/anim_left_out.xml.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/anim/left_out.xml"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_add.png.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/add.png"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_devies.png.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/devies.png"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_return_fh.png.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/return_fh.png"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_baby_car_list.png.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/baby_car_list.png"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/mipmap_bluetooth_logo.png.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/mipmap/bluetooth_logo.png"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/anim_left_in.xml.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/anim/left_in.xml"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_button_drawable.xml.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/button_drawable.xml"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/layout_activity_about.xml.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/layout/activity_about.xml"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_button_pressed.xml.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/button_pressed.xml"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_button_mode.xml.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/button_mode.xml"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/layout_list_item.xml.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/layout/list_item.xml"
+    },
+    {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/layout_list_item_babycar_state.xml.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/layout/list_item_babycar_state.xml"
+    }
+]

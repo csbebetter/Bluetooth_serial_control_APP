@@ -1,1 +1,1 @@
-com.harrysoft.androidbluetoothserial
+com.litecdows.androidbluetoothserial

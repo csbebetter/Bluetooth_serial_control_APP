@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.litecdows.androidbluetoothserial.demoapp.App-mergeDebugResources-21:/values-iw-rIL/values-iw-rIL.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\csbeb\\.gradle\\caches\\transforms-3\\d1cba7319b87eeebb39966b253b2a809\\transformed\\android-about-page-2.0.0\\res\\values-iw-rIL\\values-iw-rIL.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,108,170,223,289,355,417,474",
+                        "endColumns": "52,61,52,65,65,61,56,59",
+                        "endOffsets": "103,165,218,284,350,412,469,529"
+                    }
+                }
+            ]
+        }
+    ]
+}
