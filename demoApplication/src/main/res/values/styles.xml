@@ -6,4 +6,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <declare-styleable name="ControllerView">
+        <attr name="fingerColor" format="color" />
+        <attr name="borderColor" format="color" />
+        <attr name="fingerSize" format="dimension" />
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+
 </resources>

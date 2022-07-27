@@ -47,7 +47,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.harrysoft.androidbluetoothserial.demoapp.AutoFollowActivity" />
         <activity android:name="com.harrysoft.androidbluetoothserial.demoapp.ModeSelectionActivity" />
         <activity android:name="com.harrysoft.androidbluetoothserial.demoapp.AboutActivity" />
         <!-- Needs to be explicitly declared on P+ -->

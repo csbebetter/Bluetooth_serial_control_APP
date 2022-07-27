@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\layout_activity_auto_follow.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:\\layout\\activity_auto_follow.xml"
+    },
+    {
         "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\drawable_about.png.flat",
         "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:\\drawable\\about.png"
     },
@@ -12,12 +16,16 @@
         "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:\\drawable\\return_fh.png"
     },
     {
-        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\layout_activity_mode_selection.xml.flat",
-        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:\\layout\\activity_mode_selection.xml"
+        "merged": "com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:/layout_activity_mode_selection.xml.flat",
+        "source": "com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:/layout/activity_mode_selection.xml"
     },
     {
-        "merged": "com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:/layout_list_item.xml.flat",
-        "source": "com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:/layout/list_item.xml"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\layout_list_item_babycar_state.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:\\layout\\list_item_babycar_state.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\layout_activity_mode_selection.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:\\layout\\activity_mode_selection.xml"
     },
     {
         "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\drawable_add.png.flat",
@@ -42,6 +50,10 @@
     {
         "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\drawable_button_selector.xml.flat",
         "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:\\drawable\\button_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\drawable_baby_car_list.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-main-26:\\drawable\\baby_car_list.png"
     },
     {
         "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.harrysoft.androidbluetoothserial.demoapp.demoApplication-merged_res-24:\\drawable_pic2_ytbabycar_list.png.flat",

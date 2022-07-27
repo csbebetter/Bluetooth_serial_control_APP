@@ -45,7 +45,7 @@
 27    </queries>
 28
 29    <application
-29-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:9:5-27:19
+29-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:9:5-26:19
 30        android:allowBackup="true"
 30-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:10:9-35
 31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -82,49 +82,46 @@
 47-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:21:27-74
 48            </intent-filter>
 49        </activity>
-50        <activity android:name="com.harrysoft.androidbluetoothserial.demoapp.AutoFollowActivity" />
-50-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:24:9-56
-50-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:24:19-53
-51        <activity android:name="com.harrysoft.androidbluetoothserial.demoapp.ModeSelectionActivity" />
-51-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:25:9-59
-51-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:25:19-56
-52        <activity android:name="com.harrysoft.androidbluetoothserial.demoapp.AboutActivity" />
-52-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:26:9-51
-52-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:26:19-48
-53        <!-- Needs to be explicitly declared on P+ -->
-54        <uses-library
-54-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\csbeb\.gradle\caches\transforms-3\8760571ae26e125373760cf70246e2a8\transformed\play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
-55            android:name="org.apache.http.legacy"
-55-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\csbeb\.gradle\caches\transforms-3\8760571ae26e125373760cf70246e2a8\transformed\play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
-56            android:required="false" />
-56-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\csbeb\.gradle\caches\transforms-3\8760571ae26e125373760cf70246e2a8\transformed\play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
-57
-58        <activity
-58-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\43cca7494c218ae3dba2af7d2f0f9a09\transformed\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-59            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-59-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\43cca7494c218ae3dba2af7d2f0f9a09\transformed\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-60            android:exported="false"
-60-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\43cca7494c218ae3dba2af7d2f0f9a09\transformed\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-61            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-61-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\43cca7494c218ae3dba2af7d2f0f9a09\transformed\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-62
-63        <meta-data
-63-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\3efce0487d21ff4de4acf6d8c73542e8\transformed\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-64            android:name="com.google.android.gms.version"
-64-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\3efce0487d21ff4de4acf6d8c73542e8\transformed\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-65            android:value="@integer/google_play_services_version" />
-65-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\3efce0487d21ff4de4acf6d8c73542e8\transformed\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-66
-67        <provider
-67-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\csbeb\.gradle\caches\transforms-3\edba026203333d6b7e7e30aabdabeb8f\transformed\lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
-68            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-68-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\csbeb\.gradle\caches\transforms-3\edba026203333d6b7e7e30aabdabeb8f\transformed\lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
-69            android:authorities="com.harrysoft.androidbluetoothserial.lifecycle-process"
-69-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\csbeb\.gradle\caches\transforms-3\edba026203333d6b7e7e30aabdabeb8f\transformed\lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
-70            android:exported="false"
-70-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\csbeb\.gradle\caches\transforms-3\edba026203333d6b7e7e30aabdabeb8f\transformed\lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
-71            android:multiprocess="true" />
-71-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\csbeb\.gradle\caches\transforms-3\edba026203333d6b7e7e30aabdabeb8f\transformed\lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
-72    </application>
-73
-74</manifest>
+50        <activity android:name="com.harrysoft.androidbluetoothserial.demoapp.ModeSelectionActivity" />
+50-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:24:9-59
+50-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:24:19-56
+51        <activity android:name="com.harrysoft.androidbluetoothserial.demoapp.AboutActivity" />
+51-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:25:9-51
+51-->D:\code\Android\android-bluetooth-serial-master\demoApplication\src\main\AndroidManifest.xml:25:19-48
+52        <!-- Needs to be explicitly declared on P+ -->
+53        <uses-library
+53-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\csbeb\.gradle\caches\transforms-3\8760571ae26e125373760cf70246e2a8\transformed\play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
+54            android:name="org.apache.http.legacy"
+54-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\csbeb\.gradle\caches\transforms-3\8760571ae26e125373760cf70246e2a8\transformed\play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
+55            android:required="false" />
+55-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\csbeb\.gradle\caches\transforms-3\8760571ae26e125373760cf70246e2a8\transformed\play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
+56
+57        <activity
+57-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\43cca7494c218ae3dba2af7d2f0f9a09\transformed\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+58            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+58-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\43cca7494c218ae3dba2af7d2f0f9a09\transformed\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+59            android:exported="false"
+59-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\43cca7494c218ae3dba2af7d2f0f9a09\transformed\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+60            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+60-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\43cca7494c218ae3dba2af7d2f0f9a09\transformed\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+61
+62        <meta-data
+62-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\3efce0487d21ff4de4acf6d8c73542e8\transformed\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+63            android:name="com.google.android.gms.version"
+63-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\3efce0487d21ff4de4acf6d8c73542e8\transformed\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+64            android:value="@integer/google_play_services_version" />
+64-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\3efce0487d21ff4de4acf6d8c73542e8\transformed\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+65
+66        <provider
+66-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\csbeb\.gradle\caches\transforms-3\edba026203333d6b7e7e30aabdabeb8f\transformed\lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
+67            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+67-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\csbeb\.gradle\caches\transforms-3\edba026203333d6b7e7e30aabdabeb8f\transformed\lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
+68            android:authorities="com.harrysoft.androidbluetoothserial.lifecycle-process"
+68-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\csbeb\.gradle\caches\transforms-3\edba026203333d6b7e7e30aabdabeb8f\transformed\lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
+69            android:exported="false"
+69-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\csbeb\.gradle\caches\transforms-3\edba026203333d6b7e7e30aabdabeb8f\transformed\lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
+70            android:multiprocess="true" />
+70-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\csbeb\.gradle\caches\transforms-3\edba026203333d6b7e7e30aabdabeb8f\transformed\lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
+71    </application>
+72
+73</manifest>

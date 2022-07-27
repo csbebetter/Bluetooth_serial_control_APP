@@ -2,12 +2,15 @@ package com.harrysoft.androidbluetoothserial.demoapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
+import android.text.method.ScrollingMovementMethod;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +21,10 @@ public class ModeSelectionActivity extends AppCompatActivity {
     private TextView connectionText, messagesView, Text_Device;
     private Button connectButton, mode1_auto_follow, mode2_remote_control, mode3_recall;
     private CommunicateViewModel viewModel;
+    private RockerViewModel rocker;
+    private LinearLayout mode_buttons;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +53,13 @@ public class ModeSelectionActivity extends AppCompatActivity {
         mode1_auto_follow = findViewById(R.id.mode_button1);
         mode2_remote_control = findViewById(R.id.mode_button2);
         mode3_recall = findViewById(R.id.mode_button3);
-
-
+        rocker = findViewById(R.id.rockerViewModel);
+        mode_buttons = findViewById(R.id.linearLayout4);
         ImageView return_Image = findViewById(R.id.mode_selection_toolbar_return);
+        ScrollView scroll = findViewById(R.id.scrollView3);
+
+        messagesView.setMovementMethod(ScrollingMovementMethod.getInstance());
+
 
         //top left icon; Back to main page
         return_Image.setOnClickListener(new View.OnClickListener()
@@ -71,29 +82,46 @@ public class ModeSelectionActivity extends AppCompatActivity {
                 message = getString(R.string.no_mode_select);
             }
             messagesView.setText(message);
+            //测量view  和 scrollview的 高度
+            int offHeight = messagesView.getMeasuredHeight() - scroll.getMeasuredHeight();
+            // 假如差值小于0  那给它赋值为0
+            if (offHeight < 0) {
+                offHeight = 0;
+            }
+            else {
+                //调用 ScrollView 的 scrollTo  进行调用
+                scroll.fullScroll(ScrollView.FOCUS_DOWN);
+            }
         });
 
         //setup the FrameLayout title
         Text_Device.setText(viewModel.getDeviceName().getValue());
+
+
         // Setup the send button click action
-        mode1_auto_follow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewModel.sendMessage("1");
-            }
+        mode1_auto_follow.setOnClickListener(v -> viewModel.sendMessage("1"));
+        mode2_remote_control.setOnClickListener(v -> {
+            viewModel.sendMessage("2");
+            mode_buttons.setVisibility(View.GONE);
+            rocker.setVisibility(View.VISIBLE);
         });
-        mode2_remote_control.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewModel.sendMessage("2");
-            }
-        });
-        mode3_recall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewModel.sendMessage("3");
-            }
-        });
+        mode3_recall.setOnClickListener(v -> viewModel.sendMessage("3"));
+
+
+        //rocker
+        if (rocker != null) {
+            rocker.setOnDownActionListener((x, y) -> {
+                System.out.println(x);
+            });
+            rocker.setOnMoveActionListener((x, y) -> {
+                System.out.println(x);
+            });
+            rocker.setOnUpActionListener((x, y) -> {
+            });
+        }
+
+
+
     }
 
     // Called when the ViewModel updates us of our connectivity status
@@ -149,6 +177,14 @@ public class ModeSelectionActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // Close the activity
-        finish();
+        if(rocker.getVisibility()==View.VISIBLE){
+            rocker.setVisibility(View.GONE);
+            mode_buttons.setVisibility(View.VISIBLE);
+        }
+        else {
+            finish();
+        }
     }
+
+
 }
