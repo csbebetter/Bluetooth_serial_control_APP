@@ -86,19 +86,19 @@ public class RockerViewModel extends View {
             case MotionEvent.ACTION_DOWN:
                 handleEvent(event);
                 if (mDown != null) {
-                    mDown.OnDown((innerCenterX-viewCenterX)/(outerCircleRadius-innerCircleRadius), (innerCenterX-viewCenterY)/(outerCircleRadius-innerCircleRadius));
+                    mDown.OnDown((innerCenterX-viewCenterX)/(outerCircleRadius-innerCircleRadius), (innerCenterY-viewCenterY)/(outerCircleRadius-innerCircleRadius));
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
                 handleEvent(event);
                 if (mMove != null) {
-                    mMove.OnMove((innerCenterX-viewCenterX)/(outerCircleRadius-innerCircleRadius), (innerCenterX-viewCenterY)/(outerCircleRadius-innerCircleRadius));
+                    mMove.OnMove((innerCenterX-viewCenterX)/(outerCircleRadius-innerCircleRadius), (innerCenterY-viewCenterY)/(outerCircleRadius-innerCircleRadius));
                 }
                 break;
             case MotionEvent.ACTION_UP:
                 restorePosition();
                 if (mUp != null) {
-                    mUp.OnUp((innerCenterX-viewCenterX)/(outerCircleRadius-innerCircleRadius), (innerCenterX-viewCenterY)/(outerCircleRadius-innerCircleRadius));
+                    mUp.OnUp((innerCenterX-viewCenterX)/(outerCircleRadius-innerCircleRadius), (innerCenterY-viewCenterY)/(outerCircleRadius-innerCircleRadius));
                 }
                 break;
         }
@@ -142,13 +142,6 @@ public class RockerViewModel extends View {
         innerCenterX = viewCenterX;
         innerCenterY = viewCenterY;
         invalidate();
-    }
-
-    public double[] getInnerCenterCoordinate(){
-        double[] result = new double[2];
-        result[0] = innerCenterX - viewCenterX;
-        result[1] = innerCenterY - viewCenterY;
-        return result;
     }
 
 

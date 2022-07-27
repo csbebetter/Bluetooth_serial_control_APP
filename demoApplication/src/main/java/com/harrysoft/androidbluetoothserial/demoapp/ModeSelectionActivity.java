@@ -1,8 +1,6 @@
 package com.harrysoft.androidbluetoothserial.demoapp;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
 import android.view.MenuItem;
@@ -23,6 +21,7 @@ public class ModeSelectionActivity extends AppCompatActivity {
     private CommunicateViewModel viewModel;
     private RockerViewModel rocker;
     private LinearLayout mode_buttons;
+    int offHeight;
 
 
 
@@ -82,14 +81,11 @@ public class ModeSelectionActivity extends AppCompatActivity {
                 message = getString(R.string.no_mode_select);
             }
             messagesView.setText(message);
-            //测量view  和 scrollview的 高度
-            int offHeight = messagesView.getMeasuredHeight() - scroll.getMeasuredHeight();
-            // 假如差值小于0  那给它赋值为0
+            offHeight = messagesView.getMeasuredHeight() - scroll.getMeasuredHeight();
             if (offHeight < 0) {
                 offHeight = 0;
             }
             else {
-                //调用 ScrollView 的 scrollTo  进行调用
                 scroll.fullScroll(ScrollView.FOCUS_DOWN);
             }
         });
@@ -111,12 +107,15 @@ public class ModeSelectionActivity extends AppCompatActivity {
         //rocker
         if (rocker != null) {
             rocker.setOnDownActionListener((x, y) -> {
-                System.out.println(x);
+                viewModel.sendMessage(rockerSentData(x,y));
             });
             rocker.setOnMoveActionListener((x, y) -> {
-                System.out.println(x);
+                viewModel.sendMessage(rockerSentData(x,y));
             });
             rocker.setOnUpActionListener((x, y) -> {
+                for(int i = 0; i<10; i++){
+                    viewModel.sendMessage("S");
+                }
             });
         }
 
@@ -184,6 +183,34 @@ public class ModeSelectionActivity extends AppCompatActivity {
         else {
             finish();
         }
+    }
+
+    public String rockerSentData(double x, double y){
+        if(x>=y && x>=-y){
+            return "R";
+        }
+        else if(x<y && x>=-y){
+            return "X";
+        }
+        else if(x>=y && x<-y){
+            double distance = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+            if(distance > 0 && distance<=0.4){
+                return "F";
+            }
+            else if(distance > 0.4 && distance<=0.7){
+                return "E";
+            }
+            else{
+                return "D";
+            }
+        }
+        else if(x<y && x<-y){
+            return "L";
+        }
+        else{
+            return "S";
+        }
+
     }
 
 
