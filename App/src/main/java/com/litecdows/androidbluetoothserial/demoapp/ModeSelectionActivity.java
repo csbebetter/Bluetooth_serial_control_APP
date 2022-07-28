@@ -8,11 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.ScrollView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ModeSelectionActivity extends AppCompatActivity {
 
@@ -20,8 +27,35 @@ public class ModeSelectionActivity extends AppCompatActivity {
     private Button connectButton, mode1_auto_follow, mode2_remote_control, mode3_recall;
     private CommunicateViewModel viewModel;
     private RockerViewModel rocker;
-    private LinearLayout mode_buttons;
-    int offHeight;
+    private LinearLayout mode_buttons ,debug_windows;
+    private ListView listView;
+    private String string_rocker_data;
+
+
+    private final String[] keys = new String[]{
+            "婴儿车型号：",
+            "婴儿车MAC：",
+            "控制模式：",
+            "转向控制：",
+            "人车距离：",
+            "人车角度：",
+    };
+    private String[] values = new String[]{
+            "获取中...",
+            "获取中...",
+            "请选择···",
+            "停止",
+            "获取中...",
+            "获取中...",
+    };
+    private final int[] images_ic = new int[]{
+            R.drawable.ic_directions_car_black_24dp,
+            R.drawable.ic_swap_calls_black_24dp,
+            R.drawable.ic_alarm_black_24dp,
+            R.drawable.ic_alarm_on_black_24dp,
+            R.drawable.ic_chrome_reader_mode_black_24dp,
+            R.drawable.ic_directions_car_black_24dp,
+    };
 
 
 
@@ -54,26 +88,74 @@ public class ModeSelectionActivity extends AppCompatActivity {
         mode3_recall = findViewById(R.id.mode_button3);
         rocker = findViewById(R.id.rockerViewModel);
         mode_buttons = findViewById(R.id.linearLayout4);
+        debug_windows = findViewById(R.id.linearLayout);
         ImageView return_Image = findViewById(R.id.mode_selection_toolbar_return);
+        ImageView debug_Image = findViewById(R.id.mode_selection_toolbar_debug);
         ScrollView scroll = findViewById(R.id.scrollView3);
-
+        listView = findViewById(R.id.ListView);
         messagesView.setMovementMethod(ScrollingMovementMethod.getInstance());
 
 
+        initListView();
         //top left icon; Back to main page
         return_Image.setOnClickListener(new View.OnClickListener()
-        {@Override
-        public void onClick(View v)
+        {
+            @Override
+            public void onClick(View v)
         {
             ModeSelectionActivity.this.finish();
         }
         });
+
+        debug_Image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(debug_windows.getVisibility()==View.GONE){
+                    listView.setVisibility(View.GONE);
+                    debug_windows.setVisibility(View.VISIBLE);
+                }
+                else{
+                    listView.setVisibility(View.VISIBLE);
+                    debug_windows.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+        //rocker
+        if (rocker != null) {
+            rocker.setOnDownActionListener((x, y) -> {
+                string_rocker_data = rockerSentData(x,y);
+                viewModel.sendMessage(string_rocker_data);
+                initListView();
+            });
+            rocker.setOnMoveActionListener((x, y) -> {
+                string_rocker_data = rockerSentData(x,y);
+                viewModel.sendMessage(string_rocker_data);
+                initListView();
+            });
+            rocker.setOnUpActionListener((x, y) -> {
+                for(int i = 0; i<10; i++){
+                    viewModel.sendMessage("S");
+                    values[3] = "停止";
+                    initListView();
+                }
+            });
+        }
 
         // Start observing the data sent to us by the ViewModel
         viewModel.getConnectionStatus().observe(this, this::onConnectionStatus);
         viewModel.getDeviceName().observe(this, name -> {
             if (!TextUtils.isEmpty(name)) {
                 Text_Device.setText(name);
+                values[0] = name;
+                initListView();
+            }
+        });
+        viewModel.getDeviceMac().observe(this, mac -> {
+            if (!TextUtils.isEmpty(mac)) {
+                values[1] = mac;
+                initListView();
             }
         });
         viewModel.getMessages().observe(this, message -> {
@@ -81,45 +163,32 @@ public class ModeSelectionActivity extends AppCompatActivity {
                 message = getString(R.string.no_mode_select);
             }
             messagesView.setText(message);
-            offHeight = messagesView.getMeasuredHeight() - scroll.getMeasuredHeight();
-            if (offHeight < 0) {
-                offHeight = 0;
-            }
-            else {
-                scroll.fullScroll(ScrollView.FOCUS_DOWN);
+            int offset = messagesView.getLineCount() * messagesView.getLineHeight();
+            if (offset > scroll.getHeight()) {
+                scroll.scrollTo( 0, offset - scroll.getHeight() );
             }
         });
 
-        //setup the FrameLayout title
-        Text_Device.setText(viewModel.getDeviceName().getValue());
 
 
         // Setup the send button click action
-        mode1_auto_follow.setOnClickListener(v -> viewModel.sendMessage("1"));
+        mode1_auto_follow.setOnClickListener(v -> {
+            viewModel.sendMessage("1");
+            values[2] = "追踪模式";
+            initListView();
+        });
         mode2_remote_control.setOnClickListener(v -> {
             viewModel.sendMessage("2");
+            values[2] = "遥控模式";
+            initListView();
             mode_buttons.setVisibility(View.GONE);
             rocker.setVisibility(View.VISIBLE);
         });
-        mode3_recall.setOnClickListener(v -> viewModel.sendMessage("3"));
-
-        //rocker
-        if (rocker != null) {
-            rocker.setOnDownActionListener((x, y) -> {
-                viewModel.sendMessage(rockerSentData(x,y));
-            });
-            rocker.setOnMoveActionListener((x, y) -> {
-                viewModel.sendMessage(rockerSentData(x,y));
-            });
-            rocker.setOnUpActionListener((x, y) -> {
-                for(int i = 0; i<10; i++){
-                    viewModel.sendMessage("S");
-                }
-            });
-        }
-
-
-
+        mode3_recall.setOnClickListener(v -> {
+            viewModel.sendMessage("3");
+            values[2] = "一键召回";
+            initListView();
+        });
     }
 
     // Called when the ViewModel updates us of our connectivity status
@@ -175,9 +244,15 @@ public class ModeSelectionActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // Close the activity
-        if(rocker.getVisibility()==View.VISIBLE){
-            rocker.setVisibility(View.GONE);
-            mode_buttons.setVisibility(View.VISIBLE);
+        if(rocker.getVisibility()==View.VISIBLE || debug_windows.getVisibility()==View.VISIBLE){
+            if(rocker.getVisibility()==View.VISIBLE){
+                rocker.setVisibility(View.GONE);
+                mode_buttons.setVisibility(View.VISIBLE);
+                values[2] = "请选择···";
+                initListView();
+            }
+            debug_windows.setVisibility(View.GONE);
+            listView.setVisibility(View.VISIBLE);
         }
         else {
             finish();
@@ -186,31 +261,50 @@ public class ModeSelectionActivity extends AppCompatActivity {
 
     public String rockerSentData(double x, double y){
         if(x>=y && x>=-y){
+            values[3] = "右转";
             return "R";
         }
         else if(x<y && x>=-y){
+            values[3] = "倒车";
             return "X";
         }
         else if(x>=y && x<-y){
             double distance = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
             if(distance > 0 && distance<=0.4){
+                values[3] = "前进1";
                 return "F";
             }
             else if(distance > 0.4 && distance<=0.7){
+                values[3] = "前进2";
                 return "E";
             }
             else{
+                values[3] = "前进3";
                 return "D";
             }
         }
         else if(x<y && x<-y){
+            values[3] = "左转";
             return "L";
         }
         else{
+            values[3] = "停止";
             return "S";
         }
 
     }
 
+    public void initListView(){
+        List<Map<String, Object>> list = new ArrayList<>();
+        for (int i = 0; i < keys.length; i++) {
+            Map<String, Object> objectMap = new HashMap<>();
+            objectMap.put("key", keys[i]);
+            objectMap.put("value", values[i]);
+            objectMap.put("img", images_ic[i]);
+            list.add(objectMap);
+        }
+        SimpleAdapter adapter = new SimpleAdapter(this, list, R.layout.list_item_babycar_state, new String[]{"key", "value", "img"}, new int[]{R.id.key, R.id.value, R.id.img});
+        listView.setAdapter(adapter);
+    }
 
 }

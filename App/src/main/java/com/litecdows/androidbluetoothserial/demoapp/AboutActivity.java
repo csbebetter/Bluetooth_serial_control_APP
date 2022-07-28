@@ -32,7 +32,7 @@ public class AboutActivity extends AppCompatActivity {
                 .isRTL(false)
                 .setImage(R.drawable.pic3_about)//图片
                 .setDescription("洋田婴儿车控制器")//介绍
-                .addItem(new Element().setTitle("Version 1.1"))
+                .addItem(new Element().setTitle("Version 2.1"))
                 .setDescription("本软件由华中科技大学FOCUS团队开发，源码已上传Github，遵循相关开源协议")
                 .addGroup("FOCUS团队")
                 .addEmail("csbebetter@outlook.com")//邮箱

@@ -37,6 +37,7 @@ public class CommunicateViewModel extends AndroidViewModel {
     private MutableLiveData<ConnectionStatus> connectionStatusData = new MutableLiveData<>();
     // The device name that the activity sees
     private MutableLiveData<String> deviceNameData = new MutableLiveData<>();
+    private MutableLiveData<String> deviceMacData = new MutableLiveData<>();
     // The message in the message box that the activity sees
     private MutableLiveData<String> messageData = new MutableLiveData<>();
 
@@ -79,6 +80,7 @@ public class CommunicateViewModel extends AndroidViewModel {
 
             // Tell the activity the device name so it can set the title
             deviceNameData.postValue(deviceName);
+            deviceMacData.postValue(mac);
             // Tell the activity we are disconnected.
             connectionStatusData.postValue(ConnectionStatus.DISCONNECTED);
         }
@@ -183,7 +185,7 @@ public class CommunicateViewModel extends AndroidViewModel {
 
     // Getter method for the activity to use.
     public LiveData<String> getDeviceName() { return deviceNameData; }
-
+    public LiveData<String> getDeviceMac(){ return deviceMacData; }
     // Getter method for the activity to use.
     public LiveData<String> getMessage() { return messageData; }
 

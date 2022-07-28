@@ -1,82 +1,114 @@
 [
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/layout_activity_main.xml.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/layout/activity_main.xml"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\layout_activity_mode_selection.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\layout\\activity_mode_selection.xml"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_pic1_ytbabycar.png.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/pic1_ytbabycar.png"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_return_fh.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\return_fh.png"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_about.png.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/about.png"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_button_drawable.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\button_drawable.xml"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_pic2_ytbabycar_list.png.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/pic2_ytbabycar_list.png"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_ic_alarm_black_24dp.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\ic_alarm_black_24dp.xml"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_pic3_about.png.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/pic3_about.png"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\layout_list_item_babycar_state.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\layout\\list_item_babycar_state.xml"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_button_selector.xml.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/button_selector.xml"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_pic2_ytbabycar_list.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\pic2_ytbabycar_list.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_debug.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\debug.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_button_mode.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\button_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_ic_alarm_on_black_24dp.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\ic_alarm_on_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_ic_chrome_reader_mode_black_24dp.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\ic_chrome_reader_mode_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\layout_activity_about.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\layout\\activity_about.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_pic1_ytbabycar.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\pic1_ytbabycar.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_ic_directions_car_black_24dp.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\ic_directions_car_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_pic3_about.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\pic3_about.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_button_selector.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\button_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_devies.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\devies.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_connect_button.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\connect_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\mipmap_bluetooth_logo.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\mipmap\\bluetooth_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\layout\\activity_main.xml"
     },
     {
         "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/layout_activity_mode_selection.xml.flat",
         "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/layout/activity_mode_selection.xml"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/anim_left_out.xml.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/anim/left_out.xml"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_add.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\add.png"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_add.png.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/add.png"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_ic_swap_calls_black_24dp.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\ic_swap_calls_black_24dp.xml"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_devies.png.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/devies.png"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\anim_left_out.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\anim\\left_out.xml"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_return_fh.png.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/return_fh.png"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_about.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\about.png"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_baby_car_list.png.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/baby_car_list.png"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_baby_car_list.png.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\baby_car_list.png"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/mipmap_bluetooth_logo.png.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/mipmap/bluetooth_logo.png"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\layout_list_item.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\layout\\list_item.xml"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/anim_left_in.xml.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/anim/left_in.xml"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\anim_left_in.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\anim\\left_in.xml"
     },
     {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_button_drawable.xml.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/button_drawable.xml"
-    },
-    {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/layout_activity_about.xml.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/layout/activity_about.xml"
-    },
-    {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_button_pressed.xml.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/button_pressed.xml"
-    },
-    {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/drawable_button_mode.xml.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/drawable/button_mode.xml"
-    },
-    {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/layout_list_item.xml.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/layout/list_item.xml"
-    },
-    {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/layout_list_item_babycar_state.xml.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/layout/list_item_babycar_state.xml"
+        "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_button_pressed.xml.flat",
+        "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\drawable\\button_pressed.xml"
     }
 ]
