@@ -64,10 +64,10 @@ public class RockerViewModel extends View {
         size = getMeasuredWidth();
         setMeasuredDimension(size, size);
 
-        innerCenterX = size/2;
-        innerCenterY = size/2;
-        viewCenterX = size/2;
-        viewCenterY = size/2;
+        innerCenterX = (double)size/2;
+        innerCenterY = (double)size/2;
+        viewCenterX = (float)size/2;
+        viewCenterY = (float)size/2;
         outerCircleRadius = size/2;
         innerCircleRadius = size/5;
     }
@@ -161,13 +161,13 @@ public class RockerViewModel extends View {
     }
     // 定义三个接口
     public interface OnDownActionListener {
-        public void OnDown(double x, double y);
+        void OnDown(double x, double y);
     }
     public interface OnMoveActionListener {
-        public void OnMove(double x, double y);
+        void OnMove(double x, double y);
     }
     public interface OnUpActionListener {
-        public void OnUp(double x, double y);
+        void OnUp(double x, double y);
     }
 
 }
