@@ -14,5 +14,11 @@
 10    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 10-->D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\src\main\AndroidManifest.xml:4:5-74
 10-->D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\src\main\AndroidManifest.xml:4:22-71
-11
-12</manifest>
+11    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+11-->D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\src\main\AndroidManifest.xml:5:5-76
+11-->D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\src\main\AndroidManifest.xml:5:22-73
+12    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+12-->D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\src\main\AndroidManifest.xml:6:5-73
+12-->D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\src\main\AndroidManifest.xml:6:22-70
+13
+14</manifest>

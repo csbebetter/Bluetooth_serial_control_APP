@@ -4,7 +4,7 @@ ADDED from D:\code\Android\android-bluetooth-serial-master\App\src\main\AndroidM
 INJECTED from D:\code\Android\android-bluetooth-serial-master\App\src\main\AndroidManifest.xml:2:1-28:12
 INJECTED from D:\code\Android\android-bluetooth-serial-master\App\src\main\AndroidManifest.xml:2:1-28:12
 INJECTED from D:\code\Android\android-bluetooth-serial-master\App\src\main\AndroidManifest.xml:2:1-28:12
-MERGED from [:androidBluetoothSerial] D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-12:12
+MERGED from [:androidBluetoothSerial] D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\csbeb\.gradle\caches\transforms-3\c088e681ad6c530c297c7a55872275c8\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [io.github.medyo:android-about-page:2.0.0] C:\Users\csbeb\.gradle\caches\transforms-3\d1cba7319b87eeebb39966b253b2a809\transformed\android-about-page-2.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\csbeb\.gradle\caches\transforms-3\2013c74204f73afc47395114645d0db2\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
@@ -81,6 +81,8 @@ MERGED from [:androidBluetoothSerial] D:\code\Android\android-bluetooth-serial-m
 		ADDED from D:\code\Android\android-bluetooth-serial-master\App\src\main\AndroidManifest.xml:6:22-71
 uses-permission#android.permission.BLUETOOTH_CONNECT
 ADDED from D:\code\Android\android-bluetooth-serial-master\App\src\main\AndroidManifest.xml:7:5-76
+MERGED from [:androidBluetoothSerial] D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-76
+MERGED from [:androidBluetoothSerial] D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-76
 	android:name
 		ADDED from D:\code\Android\android-bluetooth-serial-master\App\src\main\AndroidManifest.xml:7:22-73
 application
@@ -251,6 +253,10 @@ INJECTED from D:\code\Android\android-bluetooth-serial-master\App\src\main\Andro
 		INJECTED from D:\code\Android\android-bluetooth-serial-master\App\src\main\AndroidManifest.xml
 		ADDED from D:\code\Android\android-bluetooth-serial-master\App\src\main\AndroidManifest.xml
 		INJECTED from D:\code\Android\android-bluetooth-serial-master\App\src\main\AndroidManifest.xml
+uses-permission#android.permission.BLUETOOTH_SCAN
+ADDED from [:androidBluetoothSerial] D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-73
+	android:name
+		ADDED from [:androidBluetoothSerial] D:\code\Android\android-bluetooth-serial-master\androidBluetoothSerial\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-70
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\csbeb\.gradle\caches\transforms-3\8760571ae26e125373760cf70246e2a8\transformed\play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
 	android:name

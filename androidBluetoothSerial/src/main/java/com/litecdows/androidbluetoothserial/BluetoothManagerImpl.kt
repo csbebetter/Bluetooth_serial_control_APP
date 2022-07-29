@@ -1,5 +1,6 @@
 package com.litecdows.androidbluetoothserial
 
+import android.annotation.SuppressLint
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import io.reactivex.Single
@@ -14,12 +15,14 @@ internal class BluetoothManagerImpl(private val adapter: BluetoothAdapter) : Blu
     private val devices: MutableMap<String, BluetoothSerialDeviceImpl> = mutableMapOf()
 
     override val pairedDevices: Collection<BluetoothDevice>
+        @SuppressLint("MissingPermission")
         get() = adapter.bondedDevices
 
     override fun openSerialDevice(mac: String): Single<BluetoothSerialDevice> {
         return openSerialDevice(mac, StandardCharsets.UTF_8)
     }
 
+    @SuppressLint("MissingPermission")
     override fun openSerialDevice(mac: String, charset: Charset): Single<BluetoothSerialDevice> {
         return if (devices.containsKey(mac)) {
             Single.just(devices[mac]!!)

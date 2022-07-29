@@ -1,6 +1,6 @@
 package com.litecdows.androidbluetoothserial.demoapp;
 
-import android.databinding.tool.util.StringUtils;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
@@ -14,6 +14,7 @@ import android.widget.ScrollView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -32,6 +33,7 @@ public class ModeSelectionActivity extends AppCompatActivity {
     private ListView listView;
     private String string_rocker_data;
     private static final double DISTANCE3 = 0.3;
+    private static final double DEVIATION = 0.1;
     private final String[] keys = new String[]{
             "婴儿车型号：",
             "婴儿车MAC：",
@@ -59,6 +61,7 @@ public class ModeSelectionActivity extends AppCompatActivity {
 
 
 
+    @SuppressLint("DefaultLocale")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -142,24 +145,27 @@ public class ModeSelectionActivity extends AppCompatActivity {
             }
         });
         viewModel.getMessage().observe(this,message->{
-            int c_0 = message.charAt(0);
-            int c_1 = message.charAt(1);
-            int c_2 = message.charAt(2);
-            int c_3 = message.charAt(3);
-            double dis_0 = c_0 +c_1/100;
-            double dis_1 = c_2 +c_3/100;
-            double cos = (dis_0*dis_0 + DISTANCE3* DISTANCE3 - dis_1*dis_1)/(2*dis_0*DISTANCE3);
-            double angle  = Math.acos(cos)*180/3.1415926;
-            values[4] = (dis_0+dis_1)/2+"";
-            values[5] = angle+"";
-            refreshListView();
+            if(message.length() == 4){
+                int c_0 = message.charAt(0);
+                int c_1 = message.charAt(1);
+                int c_2 = message.charAt(2);
+                int c_3 = message.charAt(3);
+
+                double dis_0 = c_0 + (double)c_1/100 + DEVIATION;
+                double dis_1 = c_2 + (double)c_3/100;
+                double cos = (dis_0*dis_0 + DISTANCE3* DISTANCE3 - dis_1*dis_1)/(2*dis_0*DISTANCE3);
+                double angle  = Math.acos(cos)*180/3.1415926;
+                values[4] = String.format("%.2f", (dis_0+dis_1)/2)+"m";
+                values[5] = String.format("%.2f", angle)+"°";
+                refreshListView();
+            }
         });
 
         modeSelect();
     }
 
     // Called when the ViewModel updates us of our connectivity status
-    private void onConnectionStatus(ModeSelectionViewModel.ConnectionStatus connectionStatus) {
+    private void onConnectionStatus(@NonNull ModeSelectionViewModel.ConnectionStatus connectionStatus) {
         switch (connectionStatus) {
             case CONNECTED:
                 connectionText.setText(R.string.status_connected);
@@ -285,15 +291,12 @@ public class ModeSelectionActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                // If the back button was pressed, handle it the normal way
-                onBackPressed();
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId() == android.R.id.home) {
+            // If the back button was pressed, handle it the normal way
+            onBackPressed();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     // Called when the user presses the back button

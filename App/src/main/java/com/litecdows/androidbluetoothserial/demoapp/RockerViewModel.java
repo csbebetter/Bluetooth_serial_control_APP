@@ -122,15 +122,16 @@ public class RockerViewModel extends View {
             invalidate();
         } else {
             //在自由域之外，内圆圆心在触摸点与外圆圆心的线段上
-            updateInnerCircelCenter(event);
+            updateInnerCircleCenter(event);
         }
     }
 
     /**
      * 在自由域外更新内圆中心坐标
      */
-    private void updateInnerCircelCenter(MotionEvent event) {
-        double distance = Math.sqrt(Math.pow(event.getX()-viewCenterX, 2) + Math.pow(event.getY()-viewCenterY, 2));  //当前触摸点到圆心的距离
+    private void updateInnerCircleCenter(MotionEvent event) {
+        double distance = Math.sqrt(Math.pow(event.getX()-viewCenterX, 2) + Math.pow(event.getY()-viewCenterY, 2));
+        //当前触摸点到圆心的距离
         int innerDistance = outerCircleRadius-innerCircleRadius;  //内圆圆心到中心点距离
         //相似三角形的性质，两个相似三角形各边比例相等得到等式
         innerCenterX = (event.getX()-viewCenterX)*innerDistance/distance + viewCenterX;
