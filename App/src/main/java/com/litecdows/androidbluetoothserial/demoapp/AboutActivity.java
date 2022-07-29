@@ -3,6 +3,8 @@ package com.litecdows.androidbluetoothserial.demoapp;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.RelativeLayout;
 //import android.widget.Toolbar;
 import androidx.annotation.Nullable;
@@ -23,6 +25,7 @@ public class AboutActivity extends AppCompatActivity {
 
     private RelativeLayout relativeLayout;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +43,12 @@ public class AboutActivity extends AppCompatActivity {
                 .addPlayStore("")
                 .addGitHub("csbebetter")//github
                 .create();
-
         relativeLayout.addView(aboutPage);
+
+//        Window window = getWindow();
+//        window.setFlags(
+//                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+//                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
     }
 
     @Override
@@ -57,8 +64,8 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     private void initViews(){
-        relativeLayout= (RelativeLayout) findViewById(R.id.about_activity_relativeLayout);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.about_activity_toolbar);
+        relativeLayout= findViewById(R.id.about_activity_relativeLayout);
+        Toolbar toolbar = findViewById(R.id.about_activity_toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar=getSupportActionBar();
         if(actionBar!=null){

@@ -1,8 +1,10 @@
-#Thu Jul 28 15:09:48 CST 2022
+#Fri Jul 29 13:53:09 CST 2022
+path.4=classes2.dex
 path.3=2/classes.dex
 path.2=0/classes.dex
 path.1=2/classes.dex
 path.0=classes.dex
+base.4=D\:\\code\\Android\\android-bluetooth-serial-master\\App\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 base.3=D\:\\code\\Android\\android-bluetooth-serial-master\\App\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
 base.2=D\:\\code\\Android\\android-bluetooth-serial-master\\App\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.1=D\:\\code\\Android\\android-bluetooth-serial-master\\App\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\2\\classes.dex
@@ -11,3 +13,4 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+renamed.4=classes5.dex

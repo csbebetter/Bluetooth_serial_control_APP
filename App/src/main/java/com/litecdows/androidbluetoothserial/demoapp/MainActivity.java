@@ -27,7 +27,6 @@ import java.util.Collection;
 public class MainActivity extends AppCompatActivity {
 
     private MainActivityViewModel viewModel;
-    private ImageView toolbar_about;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        toolbar_about = findViewById(R.id.toolbar_about);
+        ImageView toolbar_about = findViewById(R.id.toolbar_about);
         toolbar_about.setOnClickListener(v -> {
             Intent i = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(i);

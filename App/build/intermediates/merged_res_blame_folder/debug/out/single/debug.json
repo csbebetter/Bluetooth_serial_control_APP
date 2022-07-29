@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/layout_activity_main.xml.flat",
+        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/layout/activity_main.xml"
+    },
+    {
         "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\layout_activity_mode_selection.xml.flat",
         "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\layout\\activity_mode_selection.xml"
     },
@@ -74,10 +78,6 @@
     {
         "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-main-25:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:/layout_activity_mode_selection.xml.flat",
-        "source": "com.litecdows.androidbluetoothserial.demoapp.App-main-25:/layout/activity_mode_selection.xml"
     },
     {
         "merged": "C:\\Users\\csbeb\\.gradle\\daemon\\7.3.3\\com.litecdows.androidbluetoothserial.demoapp.App-merged_res-23:\\drawable_add.png.flat",

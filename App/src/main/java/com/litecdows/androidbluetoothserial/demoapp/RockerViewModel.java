@@ -1,5 +1,6 @@
 package com.litecdows.androidbluetoothserial.demoapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.BlurMaskFilter;
 import android.graphics.Canvas;
@@ -80,25 +81,28 @@ public class RockerViewModel extends View {
         canvas.drawCircle((float) innerCenterX, (float) innerCenterY, innerCircleRadius, innerCirclePaint);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        double m_x = (innerCenterX-viewCenterX)/(outerCircleRadius-innerCircleRadius);
+        double m_y = (innerCenterY-viewCenterY)/(outerCircleRadius-innerCircleRadius);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 handleEvent(event);
                 if (mDown != null) {
-                    mDown.OnDown((innerCenterX-viewCenterX)/(outerCircleRadius-innerCircleRadius), (innerCenterY-viewCenterY)/(outerCircleRadius-innerCircleRadius));
+                    mDown.OnDown(m_x, m_y);
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
                 handleEvent(event);
                 if (mMove != null) {
-                    mMove.OnMove((innerCenterX-viewCenterX)/(outerCircleRadius-innerCircleRadius), (innerCenterY-viewCenterY)/(outerCircleRadius-innerCircleRadius));
+                    mMove.OnMove(m_x, m_y);
                 }
                 break;
             case MotionEvent.ACTION_UP:
                 restorePosition();
                 if (mUp != null) {
-                    mUp.OnUp((innerCenterX-viewCenterX)/(outerCircleRadius-innerCircleRadius), (innerCenterY-viewCenterY)/(outerCircleRadius-innerCircleRadius));
+                    mUp.OnUp(m_x, m_y);
                 }
                 break;
         }
@@ -143,7 +147,6 @@ public class RockerViewModel extends View {
         innerCenterY = viewCenterY;
         invalidate();
     }
-
 
     // 为每个接口设置监听器
     public void setOnDownActionListener(OnDownActionListener down) {

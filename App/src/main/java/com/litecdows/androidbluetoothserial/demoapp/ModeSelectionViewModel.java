@@ -19,7 +19,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class CommunicateViewModel extends AndroidViewModel {
+public class ModeSelectionViewModel extends AndroidViewModel {
 
     // A CompositeDisposable that keeps track of all of our asynchronous tasks
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
@@ -54,7 +54,7 @@ public class CommunicateViewModel extends AndroidViewModel {
     private boolean viewModelSetup = false;
 
     // Called by the system, this is just a constructor that matches AndroidViewModel.
-    public CommunicateViewModel(@NotNull Application application) {
+    public ModeSelectionViewModel(@NotNull Application application) {
         super(application);
     }
 
@@ -144,6 +144,7 @@ public class CommunicateViewModel extends AndroidViewModel {
 
     // Adds a received message to the conversation
     private void onMessageReceived(String message) {
+        messageData.postValue(message);
         messages.append(deviceName).append(": ").append(message).append('\n');
         messagesData.postValue(messages.toString());
     }
@@ -153,8 +154,6 @@ public class CommunicateViewModel extends AndroidViewModel {
         // Add it to the conversation
         messages.append(getApplication().getString(R.string.you_sent)).append(": ").append(message).append('\n');
         messagesData.postValue(messages.toString());
-        // Reset the message box
-        messageData.postValue("");
     }
 
     // Send a message
@@ -179,6 +178,7 @@ public class CommunicateViewModel extends AndroidViewModel {
 
     // Getter method for the activity to use.
     public LiveData<String> getMessages() { return messagesData; }
+    public LiveData<String> getMessage() { return messageData; }
 
     // Getter method for the activity to use.
     public LiveData<ConnectionStatus> getConnectionStatus() { return connectionStatusData; }
@@ -186,8 +186,6 @@ public class CommunicateViewModel extends AndroidViewModel {
     // Getter method for the activity to use.
     public LiveData<String> getDeviceName() { return deviceNameData; }
     public LiveData<String> getDeviceMac(){ return deviceMacData; }
-    // Getter method for the activity to use.
-    public LiveData<String> getMessage() { return messageData; }
 
     // An enum that is passed to the activity to indicate the current connection status
     enum ConnectionStatus {

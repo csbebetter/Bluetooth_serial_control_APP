@@ -1,5 +1,6 @@
 package com.litecdows.androidbluetoothserial.demoapp;
 
+import android.databinding.tool.util.StringUtils;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
@@ -25,13 +26,12 @@ public class ModeSelectionActivity extends AppCompatActivity {
 
     private TextView connectionText, messagesView, Text_Device;
     private Button connectButton, mode1_auto_follow, mode2_remote_control, mode3_recall;
-    private CommunicateViewModel viewModel;
+    private ModeSelectionViewModel viewModel;
     private RockerViewModel rocker;
     private LinearLayout mode_buttons ,debug_windows;
     private ListView listView;
     private String string_rocker_data;
-
-
+    private static final double DISTANCE3 = 0.3;
     private final String[] keys = new String[]{
             "婴儿车型号：",
             "婴儿车MAC：",
@@ -61,16 +61,16 @@ public class ModeSelectionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Setup our activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mode_selection);
+
         // Enable the back button in the action bar if possible
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
         // Setup our ViewModel
-        viewModel = ViewModelProviders.of(this).get(CommunicateViewModel.class);
+        viewModel = ViewModelProviders.of(this).get(ModeSelectionViewModel.class);
 
         // This method return false if there is an error, so if it does, we should close.
         if (!viewModel.setupViewModel(getIntent().getStringExtra("device_name"), getIntent().getStringExtra("device_mac"))) {
@@ -95,53 +95,24 @@ public class ModeSelectionActivity extends AppCompatActivity {
         listView = findViewById(R.id.ListView);
         messagesView.setMovementMethod(ScrollingMovementMethod.getInstance());
 
-
-        initListView();
+        //Initialize the ListView
+        refreshListView();
         //top left icon; Back to main page
-        return_Image.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-        {
-            ModeSelectionActivity.this.finish();
-        }
-        });
-
-        debug_Image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(debug_windows.getVisibility()==View.GONE){
-                    listView.setVisibility(View.GONE);
-                    debug_windows.setVisibility(View.VISIBLE);
-                }
-                else{
-                    listView.setVisibility(View.VISIBLE);
-                    debug_windows.setVisibility(View.GONE);
-                }
+        return_Image.setOnClickListener(v -> ModeSelectionActivity.this.finish());
+        //top right icon; open the debug window(scrollview)
+        debug_Image.setOnClickListener(v -> {
+            if(debug_windows.getVisibility()==View.GONE){
+                listView.setVisibility(View.GONE);
+                debug_windows.setVisibility(View.VISIBLE);
+            }
+            else{
+                listView.setVisibility(View.VISIBLE);
+                debug_windows.setVisibility(View.GONE);
             }
         });
-
-
-        //rocker
-        if (rocker != null) {
-            rocker.setOnDownActionListener((x, y) -> {
-                string_rocker_data = rockerSentData(x,y);
-                viewModel.sendMessage(string_rocker_data);
-                initListView();
-            });
-            rocker.setOnMoveActionListener((x, y) -> {
-                string_rocker_data = rockerSentData(x,y);
-                viewModel.sendMessage(string_rocker_data);
-                initListView();
-            });
-            rocker.setOnUpActionListener((x, y) -> {
-                for(int i = 0; i<10; i++){
-                    viewModel.sendMessage("S");
-                    values[3] = "停止";
-                    initListView();
-                }
-            });
-        }
+        //rocker controller; front_1, front_2, front_3, left, right, back, stop.
+        //Send information to the bluetooth serial port and Update the listview
+        if (rocker != null) {refreshRocker();}
 
         // Start observing the data sent to us by the ViewModel
         viewModel.getConnectionStatus().observe(this, this::onConnectionStatus);
@@ -149,13 +120,13 @@ public class ModeSelectionActivity extends AppCompatActivity {
             if (!TextUtils.isEmpty(name)) {
                 Text_Device.setText(name);
                 values[0] = name;
-                initListView();
+                refreshListView();
             }
         });
         viewModel.getDeviceMac().observe(this, mac -> {
             if (!TextUtils.isEmpty(mac)) {
                 values[1] = mac;
-                initListView();
+                refreshListView();
             }
         });
         viewModel.getMessages().observe(this, message -> {
@@ -163,36 +134,32 @@ public class ModeSelectionActivity extends AppCompatActivity {
                 message = getString(R.string.no_mode_select);
             }
             messagesView.setText(message);
+            //keep sliding to the bottom
             int offset = messagesView.getLineCount() * messagesView.getLineHeight();
             if (offset > scroll.getHeight()) {
-                scroll.scrollTo( 0, offset - scroll.getHeight() );
+                //scroll.scrollTo( 0, offset - scroll.getHeight() );
+                scroll.smoothScrollTo(0,offset - scroll.getHeight());
             }
         });
-
-
-
-        // Setup the send button click action
-        mode1_auto_follow.setOnClickListener(v -> {
-            viewModel.sendMessage("1");
-            values[2] = "追踪模式";
-            initListView();
+        viewModel.getMessage().observe(this,message->{
+            int c_0 = message.charAt(0);
+            int c_1 = message.charAt(1);
+            int c_2 = message.charAt(2);
+            int c_3 = message.charAt(3);
+            double dis_0 = c_0 +c_1/100;
+            double dis_1 = c_2 +c_3/100;
+            double cos = (dis_0*dis_0 + DISTANCE3* DISTANCE3 - dis_1*dis_1)/(2*dis_0*DISTANCE3);
+            double angle  = Math.acos(cos)*180/3.1415926;
+            values[4] = (dis_0+dis_1)/2+"";
+            values[5] = angle+"";
+            refreshListView();
         });
-        mode2_remote_control.setOnClickListener(v -> {
-            viewModel.sendMessage("2");
-            values[2] = "遥控模式";
-            initListView();
-            mode_buttons.setVisibility(View.GONE);
-            rocker.setVisibility(View.VISIBLE);
-        });
-        mode3_recall.setOnClickListener(v -> {
-            viewModel.sendMessage("3");
-            values[2] = "一键召回";
-            initListView();
-        });
+
+        modeSelect();
     }
 
     // Called when the ViewModel updates us of our connectivity status
-    private void onConnectionStatus(CommunicateViewModel.ConnectionStatus connectionStatus) {
+    private void onConnectionStatus(ModeSelectionViewModel.ConnectionStatus connectionStatus) {
         switch (connectionStatus) {
             case CONNECTED:
                 connectionText.setText(R.string.status_connected);
@@ -222,40 +189,6 @@ public class ModeSelectionActivity extends AppCompatActivity {
                 connectButton.setText(R.string.connect);
                 connectButton.setOnClickListener(v -> viewModel.connect());
                 break;
-        }
-    }
-
-    // Called when a button in the action bar is pressed
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                // If the back button was pressed, handle it the normal way
-                onBackPressed();
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-    // Called when the user presses the back button
-    @Override
-    public void onBackPressed() {
-        // Close the activity
-        if(rocker.getVisibility()==View.VISIBLE || debug_windows.getVisibility()==View.VISIBLE){
-            if(rocker.getVisibility()==View.VISIBLE){
-                rocker.setVisibility(View.GONE);
-                mode_buttons.setVisibility(View.VISIBLE);
-                values[2] = "请选择···";
-                initListView();
-            }
-            debug_windows.setVisibility(View.GONE);
-            listView.setVisibility(View.VISIBLE);
-        }
-        else {
-            finish();
         }
     }
 
@@ -294,7 +227,27 @@ public class ModeSelectionActivity extends AppCompatActivity {
 
     }
 
-    public void initListView(){
+    public void refreshRocker(){
+        rocker.setOnDownActionListener((x, y) -> {
+            string_rocker_data = rockerSentData(x,y);
+            viewModel.sendMessage(string_rocker_data);
+            refreshListView();
+        });
+        rocker.setOnMoveActionListener((x, y) -> {
+            string_rocker_data = rockerSentData(x,y);
+            viewModel.sendMessage(string_rocker_data);
+            refreshListView();
+        });
+        rocker.setOnUpActionListener((x, y) -> {
+            for(int i = 0; i<10; i++){
+                viewModel.sendMessage("S");
+                values[3] = "停止";
+                refreshListView();
+            }
+        });
+    }
+
+    public void refreshListView(){
         List<Map<String, Object>> list = new ArrayList<>();
         for (int i = 0; i < keys.length; i++) {
             Map<String, Object> objectMap = new HashMap<>();
@@ -305,6 +258,61 @@ public class ModeSelectionActivity extends AppCompatActivity {
         }
         SimpleAdapter adapter = new SimpleAdapter(this, list, R.layout.list_item_babycar_state, new String[]{"key", "value", "img"}, new int[]{R.id.key, R.id.value, R.id.img});
         listView.setAdapter(adapter);
+    }
+
+    public void modeSelect(){
+        // Setup the send button click action
+        mode1_auto_follow.setOnClickListener(v -> {
+            viewModel.sendMessage("1");
+            values[2] = "追踪模式";
+            refreshListView();
+        });
+        mode2_remote_control.setOnClickListener(v -> {
+            viewModel.sendMessage("2");
+            values[2] = "遥控模式";
+            refreshListView();
+            mode_buttons.setVisibility(View.GONE);
+            rocker.setVisibility(View.VISIBLE);
+        });
+        mode3_recall.setOnClickListener(v -> {
+            viewModel.sendMessage("3");
+            values[2] = "一键召回";
+            refreshListView();
+        });
+    }
+
+    // Called when a button in the action bar is pressed
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                // If the back button was pressed, handle it the normal way
+                onBackPressed();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    // Called when the user presses the back button
+    @Override
+    public void onBackPressed() {
+        // Close the activity
+        if(rocker.getVisibility()==View.VISIBLE || debug_windows.getVisibility()==View.VISIBLE){
+            if(rocker.getVisibility()==View.VISIBLE){
+                rocker.setVisibility(View.GONE);
+                mode_buttons.setVisibility(View.VISIBLE);
+                values[2] = "请选择···";
+                refreshListView();
+            }
+            debug_windows.setVisibility(View.GONE);
+            listView.setVisibility(View.VISIBLE);
+        }
+        else {
+            finish();
+        }
     }
 
 }
