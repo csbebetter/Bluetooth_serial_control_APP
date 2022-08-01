@@ -160,7 +160,7 @@ public class ModeSelectionActivity extends AppCompatActivity {
             }
         });
         viewModel.getMessage().observe(this,message->{
-            if(message.startsWith("O")){
+            if(message.length()>=21 && message.startsWith("O")){
                 messageDisplayAndStorage(message);
             }
         });
@@ -335,7 +335,7 @@ public class ModeSelectionActivity extends AppCompatActivity {
             StringBuilder test_lines = new StringBuilder();
             test_lines.append(System.currentTimeMillis());
             for (int j=1; j<array.length; j++) {
-                test_lines.append(" ").append(j);
+                test_lines.append(" ").append(array[j]);
             }
             test_lines.append("\n");
             writeStringToFileOld(test_lines.toString());
