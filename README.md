@@ -4,7 +4,8 @@
 
 This app is an Android program for smart car control. It can send control commands to the smart car and receive information fed back by the car. So if you want use the App, you should write the relevant control program of the smart car first! :smile:This App mainly communicates with the smart car through the Bluetooth Serial Port. You just need to complete the Bluetooth pairing to get started
 
-![YTAPP](https://user-images.githubusercontent.com/70866844/181490305-344713f2-a385-4ecf-b1e7-b11443df0bc4.png)
+
+![YTAPP](https://user-images.githubusercontent.com/70866844/181872238-2ee0801e-fcf4-4acc-b834-da1de2523f00.png)
 
 ## How to use it
 
