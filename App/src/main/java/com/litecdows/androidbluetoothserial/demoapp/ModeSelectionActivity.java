@@ -1,6 +1,9 @@
 package com.litecdows.androidbluetoothserial.demoapp;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
@@ -16,8 +19,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.lifecycle.ViewModelProviders;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,8 +39,13 @@ public class ModeSelectionActivity extends AppCompatActivity {
     private LinearLayout mode_buttons ,debug_windows;
     private ListView listView;
     private String string_rocker_data;
-    private static final double DISTANCE3 = 0.3;
-    private static final double DEVIATION = 0.1;
+    private static final boolean STORAGE = true;
+    private final File file1 = new File("/storage/emulated/0/Android/","test.txt");
+    // Storage Permissions
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static final String[] PERMISSIONS_STORAGE = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE };
     private final String[] keys = new String[]{
             "婴儿车型号：",
             "婴儿车MAC：",
@@ -81,6 +93,8 @@ public class ModeSelectionActivity extends AppCompatActivity {
             return;
         }
 
+        verifyStoragePermissions(this);
+
         // Setup our Views
         connectionText = findViewById(R.id.mode_selection_connection_text);
         messagesView = findViewById(R.id.mode_selection_messages);
@@ -97,6 +111,7 @@ public class ModeSelectionActivity extends AppCompatActivity {
         ScrollView scroll = findViewById(R.id.scrollView3);
         listView = findViewById(R.id.ListView);
         messagesView.setMovementMethod(ScrollingMovementMethod.getInstance());
+
 
         //Initialize the ListView
         refreshListView();
@@ -145,19 +160,8 @@ public class ModeSelectionActivity extends AppCompatActivity {
             }
         });
         viewModel.getMessage().observe(this,message->{
-            if(message.length() == 4){
-                int c_0 = message.charAt(0);
-                int c_1 = message.charAt(1);
-                int c_2 = message.charAt(2);
-                int c_3 = message.charAt(3);
-
-                double dis_0 = c_0 + (double)c_1/100 + DEVIATION;
-                double dis_1 = c_2 + (double)c_3/100;
-                double cos = (dis_0*dis_0 + DISTANCE3* DISTANCE3 - dis_1*dis_1)/(2*dis_0*DISTANCE3);
-                double angle  = Math.acos(cos)*180/3.1415926;
-                values[4] = String.format("%.2f", (dis_0+dis_1)/2)+"m";
-                values[5] = String.format("%.2f", angle)+"°";
-                refreshListView();
+            if(message.startsWith("O")){
+                messageDisplayAndStorage(message);
             }
         });
 
@@ -287,6 +291,56 @@ public class ModeSelectionActivity extends AppCompatActivity {
         });
     }
 
+    public void writeStringToFileOld(String text){
+        FileOutputStream fileOutputStream = null;
+        try {
+            fileOutputStream = new FileOutputStream(file1,true);
+            fileOutputStream.write(text.getBytes());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            if (fileOutputStream != null) {
+                try {
+                    fileOutputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+    public static void verifyStoragePermissions(Activity activity) {
+        // Check if we have write permission
+        int permission = ActivityCompat.checkSelfPermission(activity,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE);
+        }
+    }
+
+    @SuppressLint("DefaultLocale")
+    public void messageDisplayAndStorage(String message){
+        int[] array = new int[21];
+        for (int i =0;i<array.length;i++){
+            array[i] = message.charAt(i);
+        }
+        values[4] = String.format("%.2f", array[17]+(double)array[18]/100)+"m";
+        values[5] = String.format("%.2f", array[19]+(double)array[20]/100)+"°";
+        refreshListView();
+        if(STORAGE){
+            StringBuilder test_lines = new StringBuilder();
+            test_lines.append(System.currentTimeMillis());
+            for (int j=1; j<array.length; j++) {
+                test_lines.append(" ").append(j);
+            }
+            test_lines.append("\n");
+            writeStringToFileOld(test_lines.toString());
+        }
+    }
     // Called when a button in the action bar is pressed
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
@@ -317,5 +371,6 @@ public class ModeSelectionActivity extends AppCompatActivity {
             finish();
         }
     }
+
 
 }
