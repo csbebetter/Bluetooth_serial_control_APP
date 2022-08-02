@@ -180,7 +180,7 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <com.litecdows.androidbluetoothserial.demoapp.RockerViewModel
+    <com.litecdows.androidbluetoothserial.demoapp.RockerView
         android:id="@+id/rockerViewModel"
         android:layout_width="210dp"
         android:layout_height="210dp"

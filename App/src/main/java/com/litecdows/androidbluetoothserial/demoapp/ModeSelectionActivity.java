@@ -34,8 +34,8 @@ public class ModeSelectionActivity extends AppCompatActivity {
 
     private TextView connectionText, messagesView, Text_Device;
     private Button connectButton, mode1_auto_follow, mode2_remote_control, mode3_recall;
-    private ModeSelectionViewModel viewModel;
-    private RockerViewModel rocker;
+    private ModeSelectionActivityViewModel viewModel;
+    private RockerView rocker;
     private LinearLayout mode_buttons ,debug_windows;
     private ListView listView;
     private String string_rocker_data;
@@ -85,7 +85,7 @@ public class ModeSelectionActivity extends AppCompatActivity {
         }
 
         // Setup our ViewModel
-        viewModel = ViewModelProviders.of(this).get(ModeSelectionViewModel.class);
+        viewModel = ViewModelProviders.of(this).get(ModeSelectionActivityViewModel.class);
 
         // This method return false if there is an error, so if it does, we should close.
         if (!viewModel.setupViewModel(getIntent().getStringExtra("device_name"), getIntent().getStringExtra("device_mac"))) {
@@ -169,7 +169,7 @@ public class ModeSelectionActivity extends AppCompatActivity {
     }
 
     // Called when the ViewModel updates us of our connectivity status
-    private void onConnectionStatus(@NonNull ModeSelectionViewModel.ConnectionStatus connectionStatus) {
+    private void onConnectionStatus(@NonNull ModeSelectionActivityViewModel.ConnectionStatus connectionStatus) {
         switch (connectionStatus) {
             case CONNECTED:
                 connectionText.setText(R.string.status_connected);

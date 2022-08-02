@@ -19,7 +19,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class ModeSelectionViewModel extends AndroidViewModel {
+public class ModeSelectionActivityViewModel extends AndroidViewModel {
 
     // A CompositeDisposable that keeps track of all of our asynchronous tasks
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
@@ -54,7 +54,7 @@ public class ModeSelectionViewModel extends AndroidViewModel {
     private boolean viewModelSetup = false;
 
     // Called by the system, this is just a constructor that matches AndroidViewModel.
-    public ModeSelectionViewModel(@NotNull Application application) {
+    public ModeSelectionActivityViewModel(@NotNull Application application) {
         super(application);
     }
 

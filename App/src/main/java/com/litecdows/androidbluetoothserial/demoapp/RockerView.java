@@ -11,7 +11,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-public class RockerViewModel extends View {
+public class RockerView extends View {
     private Paint outerCirclePaint;
     private Paint innerCirclePaint;
     /** 内圆中心x坐标 */
@@ -35,12 +35,12 @@ public class RockerViewModel extends View {
 
 
 
-    public RockerViewModel(Context context) {
+    public RockerView(Context context) {
         super(context);
         init();
     }
 
-    public RockerViewModel(Context context, @Nullable AttributeSet attrs) {
+    public RockerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
     }

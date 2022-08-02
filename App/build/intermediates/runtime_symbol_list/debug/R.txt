@@ -1814,6 +1814,7 @@ int drawable design_ic_visibility_off 0x7f070085
 int drawable design_password_eye 0x7f070086
 int drawable design_snackbar_background 0x7f070087
 int drawable devies 0x7f070088
+int drawable frameline 0x7f0700be
 int drawable googleg_disabled_color_18 0x7f070089
 int drawable googleg_standard_color_18 0x7f07008a
 int drawable ic_alarm_black_24dp 0x7f07008b
