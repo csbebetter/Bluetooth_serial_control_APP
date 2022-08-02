@@ -45,10 +45,12 @@ public class AboutActivity extends AppCompatActivity {
                 .create();
         relativeLayout.addView(aboutPage);
 
-//        Window window = getWindow();
-//        window.setFlags(
-//                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
-//                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        Window window = getWindow();
+        window.setFlags(
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+        StatusBarUtil.setStatusBarLightMode(getWindow());
     }
 
     @Override
